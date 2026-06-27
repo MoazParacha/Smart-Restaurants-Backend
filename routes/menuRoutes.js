@@ -9,7 +9,7 @@ const {
 
 const authMiddleware = require('../middleware/authMiddleware');
 
-router.get('/:restaurantId', authMiddleware, getMenuItems);
+router.get('/:restaurantId', getMenuItems);
 router.post('/', authMiddleware, createMenuItem);
 router.put('/:id', authMiddleware, updateMenuItem);
 router.delete('/:id', authMiddleware, deleteMenuItem);

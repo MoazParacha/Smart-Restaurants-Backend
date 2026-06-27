@@ -13,8 +13,8 @@ const authMiddleware = require('../middleware/authMiddleware');
 
 router.get('/dashboard/:restaurantId', authMiddleware, getDashboardStats);
 router.get('/analytics/:restaurantId', authMiddleware, getAnalytics);
-router.get('/:restaurantId', authMiddleware, getOrders);
-router.post('/', authMiddleware, createOrder);
+router.get('/:restaurantId', getOrders);
+router.post('/', createOrder);
 router.patch('/:id/status', authMiddleware, updateOrderStatus);
 router.delete('/:id', authMiddleware, deleteOrder);
 
